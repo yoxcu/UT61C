@@ -101,7 +101,7 @@ class Ut61c(object):
             digit_value = 0
             for i, digit in zip(range(4), digits):
                 digit_value += digit*(10**(3-i))
-            display = digit_value / self.komma[msg[6]]
+            display = sign*digit_value / self.komma[msg[6]]
             display_value = display * self.exp[msg[9]][0]
             #print(str(display)+ " " + self.exp[msg[9]][1] + self.mode[msg[10]] + " " + ACDC)
             #print(display_value)
